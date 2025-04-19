@@ -1,3 +1,4 @@
+import React, { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Mona_Sans } from "next/font/google";
 import "./globals.css";
@@ -12,11 +13,7 @@ export const metadata: Metadata = {
   description: "An AI application to help prepare for your interviews",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const RootLayout = ({ children } : { children : ReactNode }) =>  {
   return (
     <html lang="en" className="dark"> 
       <body
@@ -25,5 +22,7 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  );
+  )
 }
+
+export default RootLayout;
