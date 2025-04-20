@@ -1,4 +1,6 @@
+import InterviewCard from '@/components/InterviewCard'
 import { Button } from '@/components/ui/button'
+import { dummyInterviews } from '@/constants'
 import { robot } from '@/public'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -21,14 +23,19 @@ const Home = () => {
       </section>
       <section className='flex flex-col gap-6 mt-8'>
         <h2>Your interviews</h2>
-        <div className='interviews-sectione'>
-          <p>{"You aren't preparing enough"}</p>
+        <div className='interviews-section'>
+          {dummyInterviews.map((interview) => (
+            <InterviewCard key={interview.id} {...interview} />
+          ))}
         </div>
       </section>
       <section className='flex flex-col gap-6 mt-8'>
         <h2>Start preparing</h2>
         <div className='interviews-section'>
-          <p>Unlucky you</p>
+          {dummyInterviews.map((interview) => (
+            <InterviewCard key={interview.id} {...interview} />
+          ))}
+          {/* <p>You haven&apos;t taken any interviews yet</p> */}
         </div>
       </section>
     </>
