@@ -1,7 +1,6 @@
 "use server";
 
 import { db, auth } from "@/firebase/admin";
-import { signInWithEmailAndPassword } from "firebase/auth";
 import { cookies } from "next/headers";
 
 export const signUp = async (params : SignUpParams) => {
@@ -18,6 +17,10 @@ export const signUp = async (params : SignUpParams) => {
             name, 
             email,
         })
+        return {
+            success: true,
+            message: "You have successfully created an account",
+        }
     } catch (error: any) {
         console.error("Error creating a user: ", error);
         if (error.code === "auth/email-already-exists") {
