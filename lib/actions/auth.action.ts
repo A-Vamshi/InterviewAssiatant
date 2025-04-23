@@ -39,7 +39,7 @@ export const signUp = async (params : SignUpParams) => {
 export const signIn = async (params: SignInParams) => {
     const { email, idToken } = params;
     try {
-        const userRecord = auth.getUserByEmail(email);
+        const userRecord = await auth.getUserByEmail(email);
         if (!userRecord) {
             return {
                 success: false,
@@ -72,7 +72,7 @@ export const setSessionCookie = async (idToken: string) => {
     })
 }
 
-export const  getCurrentUser = async (): Promise<User | null> => {
+export const getCurrentUser = async (): Promise<User | null> => {
     const cookieStore = await cookies();
     const sessionCookie = cookieStore.get("session")?.value;
     if (!sessionCookie) {
