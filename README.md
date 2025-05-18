@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎯 Mock Interview Prep App
 
-## Getting Started
+A powerful application to help users prepare for mock interviews using **Vapi Workflow**, **Next.js**, and **Firebase**. Practice interviews with voice-based AI, receive real-time feedback, and improve your performance.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+- 🎙️ **Voice-Based Interviews**: Talk to an AI interviewer using Vapi workflows.
+- 🤖 **AI-Generated Questions**: Get intelligent, role-specific questions dynamically.
+- 📊 **Real-Time Feedback**: Receive instant evaluation and suggestions.
+- 🔒 **Firebase Integration**: Secure user management and data storage.
+- ⚡ **Built with Next.js**: Fast, modern, and SEO-optimized frontend.
+
+---
+
+## 🛠️ Tech Stack
+
+- **[Next.js](https://nextjs.org/)** – React-based web framework
+- **[Vapi.ai](https://vapi.ai/)** – Voice AI interaction engine
+- **[Firebase](https://firebase.google.com/)** – Backend services and authentication
+- **[Google Generative AI](https://makersuite.google.com/)** – AI question generation
+- **[TailwindCSS](https://tailwindcss.com/)** (if used) – Utility-first CSS framework
+- **[TypeScript](https://www.typescriptlang.org/)** (if used) – Type-safe development
+
+---
+
+## 📷 Demo
+<img src="/images/1.png" alt="screenshot" width="1000"/> <img src="/images/2.png" alt="screenshot" width="1000"/>
+<img src="/images/3.png" alt="screenshot" width="1000"/>
+<img src="/images/4.png" alt="screenshot" width="1000"/>
+<img src="/images/5.png" alt="screenshot" width="1000"/>
+
+---
+
+## 📦 Installation
 
 ```bash
+# 1. Clone the repository
+git clone https://github.com/yourusername/mock-interview-app.git
+cd mock-interview-app
+
+# 2. Install dependencies
+npm install
+# or
+yarn install
+
+# 3. Create environment file
+touch .env.local
+```
+
+## Add the following to .env.local: 
+
+```bash
+FIREBASE_PROJECT_ID=your_firebase_project_id
+FIREBASE_PRIVATE_KEY_ID=your_firebase_private_key_id
+FIREBASE_PRIVATE_KEY="your_firebase_private_key"
+FIREBASE_CLIENT_EMAIL=your_firebase_client_email
+GOOGLE_GENERATIVE_AI_API_KEY=your_generative_ai_api_key
+NEXT_PUBLIC_VAPI_TOKEN=your_vapi_token
+NEXT_PUBLIC_VAPI_WORKFLOW_ID=your_vapi_workflow_id
+```
+
+## Run it in your machine 
+```bash
+# 4. Run the development server
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+- MIT
