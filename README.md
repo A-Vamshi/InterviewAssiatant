@@ -1,4 +1,4 @@
-# 🎯 Mock Interview Prep App
+# 🎯 InterviewAssistant
 
 A powerful application to help users prepare for mock interviews using **Vapi Workflow**, **Next.js**, and **Firebase**. Practice interviews with voice-based AI, receive real-time feedback, and improve your performance.
 
@@ -37,13 +37,11 @@ A powerful application to help users prepare for mock interviews using **Vapi Wo
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/mock-interview-app.git
-cd mock-interview-app
+git clone https://github.com/A-Vamshi/InterviewAssiatant.git   
+cd interviewassistant
 
 # 2. Install dependencies
 npm install
-# or
-yarn install
 
 # 3. Create environment file
 touch .env.local
